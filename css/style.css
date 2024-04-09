@@ -486,7 +486,7 @@ pre {
 
 @media (max-width: 768px) {
   .container {
-    padding-top: 20px; } }
+    padding: 20px 0 0 0; } }
 
 .row {
   display: -webkit-box;
@@ -6710,7 +6710,7 @@ button.bg-dark:focus {
   width: 75% !important; }
 
 .w-100 {
-  width: 100% !important; }
+  width: 110% !important; }
 
 .w-auto {
   width: auto !important; }
@@ -9332,7 +9332,7 @@ textarea.form-control {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 110%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* Ajusta el color y la opacidad del overlay aquí */
 }
