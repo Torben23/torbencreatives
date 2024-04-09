@@ -63,7 +63,7 @@ fullHeight2();
 
    var burgerMenu = function() {
 
-		$('.js-colorlib-nav-toggle').on('click', function(event){
+		$('.js-torben-nav-toggle').on('click', function(event){
 			event.preventDefault();
 			var $this = $(this);
 
@@ -82,13 +82,13 @@ fullHeight2();
 	var mobileMenuOutsideClick = function() {
 
 		$(document).click(function (e) {
-	    var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
+	    var container = $("#torben-aside, .js-torben-nav-toggle");
 	    if (!container.is(e.target) && container.has(e.target).length === 0) {
 
 	    	if ( $('body').hasClass('offcanvas') ) {
 
     			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
+    			$('.js-torben-nav-toggle').removeClass('active');
 			
 	    	}
 	    	
@@ -99,7 +99,7 @@ fullHeight2();
 			if ( $('body').hasClass('offcanvas') ) {
 
     			$('body').removeClass('offcanvas');
-    			$('.js-colorlib-nav-toggle').removeClass('active');
+    			$('.js-torben-nav-toggle').removeClass('active');
 			
 	    	}
 		});
