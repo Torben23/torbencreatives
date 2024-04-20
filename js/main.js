@@ -253,6 +253,28 @@ fullHeight2();
   });
 
 
+  // Send whats
+
+  document.getElementById("whatsapp-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+    // Obtener el mensaje introducido por el usuario
+    var message = document.getElementById("whatsapp-message").value;
+
+    // Reemplazar espacios en blanco con %20 para el enlace de WhatsApp
+    message = encodeURIComponent(message);
+
+    // Número de teléfono al que enviar el mensaje de WhatsApp
+    var phoneNumber = "542216062309"; // Reemplaza "tu_numero_de_whatsapp" con tu número de WhatsApp, incluyendo el código de país sin el signo de "+" ni ceros iniciales
+
+    // Generar el enlace para enviar el mensaje de WhatsApp
+    var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + message;
+
+    // Abrir una nueva ventana o pestaña con el enlace de WhatsApp
+    window.open(whatsappLink, "_blank");
+	});
+
+
 
 
 })(jQuery);

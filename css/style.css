@@ -4,7 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
- :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -6710,7 +6710,7 @@ button.bg-dark:focus {
   width: 75% !important; }
 
 .w-100 {
-  width: 110% !important; }
+  width: 100% !important; }
 
 .w-auto {
   width: auto !important; }
@@ -8549,7 +8549,7 @@ h1, h2, h3, h4, h5,
         -ms-border-radius: 0;
         border-radius: 0; }
         #torben-aside .torben-footer .torben-subscribe-form .form-group input {
-          padding-right: 40px;
+          /* padding-right: 40px; */
           background: transparent !important;
           border: 1px solid rgba(255, 255, 255, 0.1) !important;
           color: rgba(255, 255, 255, 0.4) !important;
@@ -8727,16 +8727,19 @@ h1, h2, h3, h4, h5,
 
 .btn {
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #f3c623;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
-  border-radius: 30px;
+  border-radius: 10px;
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
   .btn:hover, .btn:active, .btn:focus {
-    outline: none; }
+    outline: none;
+    color: #f3c623 }
   .btn.btn-primary {
-    background: #f3c623;
+    
     border: 1px solid #f3c623;
     color: #000000; }
     .btn.btn-primary:hover {
@@ -9332,7 +9335,7 @@ textarea.form-control {
     position: absolute;
     top: 0;
     left: 0;
-    width: 110%;
+    width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6); /* Ajusta el color y la opacidad del overlay aquí */
 }
@@ -9412,12 +9415,17 @@ textarea.form-control {
   justify-content: center;
   align-items: center;
   opacity: 0; /* Inicialmente invisible */
+  flex-direction: column;
 }
 
 /* Estilos para el contenedor de la imagen cuando está invertido */
 .img-container.hover .hidden-text {
   transform: rotateY(0deg); /* Mostrar el texto al invertir la imagen */
   opacity: 1; /* Hacer el texto visible */
+}
+
+.hidden-text h4 {
+  border-bottom: 1px solid white; /* Cambia el color y el grosor de la línea según tus preferencias */
 }
 
 
@@ -9443,7 +9451,7 @@ textarea.form-control {
 
 @media (max-width: 767.98px) {
   .img-container {
-      width: 370px; /* Ancho deseado en resoluciones móviles */
+      
       height: 246px; /* Altura deseada en resoluciones móviles */
       padding: 0; /* Eliminar el relleno para ajustar el tamaño correctamente */
   }
