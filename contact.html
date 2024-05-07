@@ -34,14 +34,14 @@
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="pricing.html">Pricing</a></li>
+					<!--<li><a href="pricing.html">Pricing</a></li>-->
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 
 			<div class="torben-footer">
 				<div class="mb-4">
-					<h3>Tell me your entrepreneur</h3>
+					<h3>Tell me about your entrepreneurship</h3>
 					<form id="whatsapp-form" method="post" class="torben-subscribe-form">
 						<div class="form-group d-flex">
 							<div class="icon"><span class="icon-paper-plane"></span></div>
@@ -65,50 +65,47 @@
 					<div class="row d-flex no-gutters">
 						<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
 							<div class="contact-wrap w-100 p-md-5 p-4">
-								<h3 class="mb-4 heading">Get in touch</h3>
-								<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+								<h3 class="mb-4 heading">Let's get in touch</h3>
+								<form id="contactForm" name="contactForm" class="contactForm">
 									<div class="row">
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="label" for="name">Full Name</label>
-												<input type="text" class="form-control" name="name" id="name"
-													placeholder="Name">
+												<input type="text" class="form-control" id="name" placeholder="Name">
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="label" for="email">Email Address</label>
-												<input type="email" class="form-control" name="email" id="email"
-													placeholder="Email">
+												<input type="email" class="form-control" id="email" placeholder="Email">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group">
 												<label class="label" for="subject">Subject</label>
-												<input type="text" class="form-control" name="subject" id="subject"
-													placeholder="Subject">
+												<input type="text" class="form-control" id="subject" placeholder="Subject">
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group">
 												<label class="label" for="#">Message</label>
-												<textarea name="message" class="form-control" id="message" cols="30"
-													rows="4" placeholder="Message"></textarea>
+												<textarea class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="form-group">
-												<input type="submit" value="Send" class="btn">
+												<button id="sendWhatsAppMessage" class="btn">Send</button>
 												<div class="submitting"></div>
 											</div>
 										</div>
 									</div>
 								</form>
+								
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-5 d-flex align-items-stretch">
-							<div class="info-wrap js-fullheight2 bg-primary w-100 p-md-5 p-4">
-								<h3>Let's get in touch</h3>
+							<div class="info-wrap js-fullheight2 bg-primary w-100 p-md-5 p-4" style="height: 450px;">
+								<h3>Where I am now</h3>
 								<p class="mb-4">We're open for any suggestion or just to have a chat</p>
 								<div class="dbox w-100 d-flex align-items-start">
 									<div class="icon d-flex align-items-center justify-content-center">
@@ -123,7 +120,7 @@
 										<span class="fa fa-phone"></span>
 									</div>
 									<div class="text pl-3">
-										<p><span>Phone:</span> <a href="tel://1234567920">+54 2216062309</a></p>
+										<p><span>Phone:</span>+54 221 6062309</p>
 									</div>
 								</div>
 								<div class="dbox w-100 d-flex align-items-center">
@@ -131,8 +128,7 @@
 										<span class="fa fa-paper-plane"></span>
 									</div>
 									<div class="text pl-3">
-										<p><span>Email:</span> <a
-												href="bertoncontable@gmail.com">bertoncontable@gmail.com</a></p>
+										<p><span>Email: </span>bertoncontable@gmail.com</p>
 									</div>
 								</div>
 								<div class="dbox w-100 d-flex align-items-center">
@@ -140,7 +136,7 @@
 										<span class="fa fa-globe"></span>
 									</div>
 									<div class="text pl-3">
-										<p><span>Website</span> <a href="#">marcosporelmundo.com.ar</a></p>
+										<p><span>Website: </span>marcosporelmundo.com.ar</p>
 									</div>
 								</div>
 							</div>
@@ -174,6 +170,27 @@
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
 	<script src="js/main.js"></script>
+
+	<script>
+		document.getElementById('sendWhatsAppMessage').addEventListener('click', function(event) {
+			event.preventDefault();
+	
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var subject = document.getElementById('subject').value;
+			var message = document.getElementById('message').value;
+	
+			// Construye el mensaje de WhatsApp con la información del formulario
+			var whatsappMessage = "Nombre: " + name + "%0AEmail: " + email + "%0AAsunto: " + subject + "%0AMensaje: " + message;
+	
+			// Crea el enlace de WhatsApp
+			var whatsappLink = "https://wa.me/542216062309/?text=" + whatsappMessage;
+	
+			// Abre el enlace en una nueva ventana/pestaña
+			window.open(whatsappLink, "_blank");
+		});
+	</script>
+	
 
 </body>
 
