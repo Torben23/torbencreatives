@@ -43,7 +43,7 @@
 			</nav>
 
 			<div class="torben-footer">
-				<div class="mb-4">
+				<div class="mb-4 mobile-hide">
 					<h3>Tell me about your entrepreneurship</h3>
 					<form id="whatsapp-form" method="post" class="torben-subscribe-form">
 						<div class="form-group d-flex">
@@ -57,7 +57,7 @@
 					</form>
 				</div>
 				<p class="pfooter">
-					Copyright &copy; 2024. All rights reserved | Designed by <a
+					Copyright &copy; 2024<br>All Rights Reserved<br>Designed by <a
 						href="https://www.linkedin.com/in/marcos-berton/" target="_blank">Torb3n</a>
 				</p>
 			</div>
@@ -193,46 +193,6 @@
 			window.open(whatsappLink, "_blank");
 		});
 	</script>
-
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			var navToggle = document.querySelector('.js-torben-nav-toggle');
-			var aside = document.getElementById('torben-aside');
-			var whatsappForm = document.getElementById('whatsapp-form');
-
-			navToggle.addEventListener('click', function (e) {
-				e.preventDefault();
-				aside.classList.toggle('open');
-			});
-
-			// Prevent the menu from closing when clicking inside the form
-			whatsappForm.addEventListener('click', function (event) {
-				event.stopPropagation();
-			});
-
-			// Close the menu when clicking outside of it
-			document.addEventListener('click', function (event) {
-				if (!aside.contains(event.target) && aside.classList.contains('open')) {
-					aside.classList.remove('open');
-				}
-			});
-
-			// Ensure that clicks inside the menu don't close it
-			aside.addEventListener('click', function (event) {
-				event.stopPropagation();
-			});
-
-			// Prevent the menu from closing when focusing on input fields
-			var inputFields = whatsappForm.querySelectorAll('input');
-			inputFields.forEach(function(input) {
-				input.addEventListener('focus', function(event) {
-					event.stopPropagation();
-				});
-			});
-		});
-	</script>
-
-	
 
 </body>
 
