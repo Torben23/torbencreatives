@@ -28,8 +28,11 @@
 	<div id="torben-page">
 		<a href="#" class="js-torben-nav-toggle torben-nav-toggle"><i></i></a>
 		<aside id="torben-aside" role="complementary" class="js-fullheight2">
-			<h1 id="torben-logo" class="mb-4 mb-md-5"><a href="index.html"
-					style="background-image: url(images/bg_1.jpg);">Torben Creatives</a></h1>
+			<div id="torben-logo" class="mb-4 mb-md-5">
+				<a href="index.html">
+					<img src="images/MB2.png" alt="Torben Creatives">
+				</a>
+			</div>			
 			<nav id="torben-main-menu" role="navigation">
 				<ul>
 					<li><a href="index.html">Home</a></li>
@@ -52,7 +55,7 @@
 							<div class="submitting"></div>
 						</div>
 					</form>
-				</div>
+				</div>					
 				<p class="pfooter">
 					Copyright &copy; 2024. All rights reserved | Designed by <a
 						href="https://www.linkedin.com/in/marcos-berton/" target="_blank">Torb3n</a>
@@ -142,9 +145,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="row d-flex no-gutters">
+					<!-- <div class="row d-flex no-gutters">
 						<img src="images/logo7.jpg" alt="Logo" class="img-fluid">
-					</div>
+					</div> -->
 				</div>
 			</section>
 		</div><!-- END torben-MAIN -->
@@ -190,6 +193,17 @@
 			window.open(whatsappLink, "_blank");
 		});
 	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var whatsappForm = document.getElementById('whatsapp-form');
+			
+			whatsappForm.addEventListener('click', function (event) {
+				event.stopPropagation();
+			});
+		});
+	</script>
+
 	
 
 </body>

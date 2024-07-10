@@ -8428,36 +8428,43 @@ h1, h2, h3, h4, h5,
       -o-transform: translateX(-270px);
       transform: translateX(-270px);
       padding-top: 2em; } }
-  #torben-aside #torben-logo {
-    display: block;
-    width: 100%;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: .8;
-    font-family: "Abril Fatface", cursive; }
-    @media (max-width: 1199.98px) {
       #torben-aside #torben-logo {
-        font-size: 40px; } }
-    #torben-aside #torben-logo span {
-      display: block; }
-    @media (max-width: 991.98px) {
-      #torben-aside #torben-logo {
-        margin-bottom: 20px; } }
-    @media (max-width: 767.98px) {
-      #torben-aside #torben-logo {
-        font-size: 50px; } }
+        display: block;
+        width: 100%;
+    }
+    
     #torben-aside #torben-logo a {
-      display: inline-block;
-      text-align: left;
-      color: #000000;
-      overflow: hidden;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center; }
+        display: inline-block;
+        text-align: left;
+        overflow: hidden;
+    }
+    
+    #torben-aside #torben-logo a img {
+        width: 80%;
+        height: auto;
+    }
+    
+    @media (max-width: 1199.98px) {
+        #torben-aside #torben-logo {
+            width: 100%; /* Puedes ajustar el ancho según sea necesario */
+        }
+    }
+    @media (max-width: 991.98px) {
+        #torben-aside #torben-logo {
+            margin-bottom: 20px;
+        }
+    }
+    @media (max-width: 767.98px) {
+        #torben-aside #torben-logo {
+            width: 80%; /* Puedes ajustar el ancho según sea necesario */
+        }
+    }
+    #torben-aside #torben-logo a {
+        display: inline-block;
+        text-align: left;
+        overflow: hidden;
+    }
+    
   #torben-aside #torben-main-menu ul {
     margin: 0;
     padding: 0; }
