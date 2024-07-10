@@ -55,7 +55,7 @@
 							<div class="submitting"></div>
 						</div>
 					</form>
-				</div>                    
+				</div>
 				<p class="pfooter">
 					Copyright &copy; 2024. All rights reserved | Designed by <a
 						href="https://www.linkedin.com/in/marcos-berton/" target="_blank">Torb3n</a>
@@ -220,6 +220,14 @@
 			// Ensure that clicks inside the menu don't close it
 			aside.addEventListener('click', function (event) {
 				event.stopPropagation();
+			});
+
+			// Prevent the menu from closing when focusing on input fields
+			var inputFields = whatsappForm.querySelectorAll('input');
+			inputFields.forEach(function(input) {
+				input.addEventListener('focus', function(event) {
+					event.stopPropagation();
+				});
 			});
 		});
 	</script>
