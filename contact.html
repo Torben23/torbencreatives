@@ -55,7 +55,7 @@
 							<div class="submitting"></div>
 						</div>
 					</form>
-				</div>					
+				</div>                    
 				<p class="pfooter">
 					Copyright &copy; 2024. All rights reserved | Designed by <a
 						href="https://www.linkedin.com/in/marcos-berton/" target="_blank">Torb3n</a>
@@ -196,9 +196,29 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
+			var navToggle = document.querySelector('.js-torben-nav-toggle');
+			var aside = document.getElementById('torben-aside');
 			var whatsappForm = document.getElementById('whatsapp-form');
-			
+
+			navToggle.addEventListener('click', function (e) {
+				e.preventDefault();
+				aside.classList.toggle('open');
+			});
+
+			// Prevent the menu from closing when clicking inside the form
 			whatsappForm.addEventListener('click', function (event) {
+				event.stopPropagation();
+			});
+
+			// Close the menu when clicking outside of it
+			document.addEventListener('click', function (event) {
+				if (!aside.contains(event.target) && aside.classList.contains('open')) {
+					aside.classList.remove('open');
+				}
+			});
+
+			// Ensure that clicks inside the menu don't close it
+			aside.addEventListener('click', function (event) {
 				event.stopPropagation();
 			});
 		});
