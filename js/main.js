@@ -30,21 +30,36 @@
     // Ajusta la altura cuando la ventana se redimensiona
     $(window).resize(function(){
         adjustHeight();
-    });
-};
+		});
+	};
 
 // Llama a la función para iniciarla
 fullHeight();
 
 var fullHeight2 = function() {
+    var updateHeight = function() {
+        if ($(window).width() <= 768) {
+            // Pantallas pequeñas (celulares)
+            $('.js-fullheight2').css('height', $(window).height() * 0.9);
+        } else {
+            // Pantallas grandes (escritorio)
+            $('.js-fullheight2').css('height', $(window).height());
+        }
+    };
 
-	$('.js-fullheight2').css('height', $(window).height());
-	$(window).resize(function(){
-		$('.js-fullheight2').css('height', $(window).height());
-	});
+    // Establecer la altura al cargar la página
+    updateHeight();
 
+    // Añadir un evento de redimensionamiento a la ventana del navegador
+    $(window).resize(function(){
+        updateHeight();
+    });
 };
+
+// Llama a la función fullHeight2 para que se ejecute inmediatamente
 fullHeight2();
+
+
 
 
 	// loader

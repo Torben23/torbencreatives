@@ -9489,3 +9489,15 @@ textarea.form-control {
       padding: 0; /* Eliminar el relleno para ajustar el tamaño correctamente */
   }
 }
+
+/* Altura 100% para pantallas grandes (escritorio) */
+.js-fullheight2 {
+  height: 100vh; /* 100% de la altura de la ventana del navegador */
+}
+
+/* Altura 90% para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  .js-fullheight2 {
+      height: 90vh; /* 90% de la altura de la ventana del navegador */
+  }
+}
