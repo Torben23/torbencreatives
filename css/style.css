@@ -8456,7 +8456,7 @@ h1, h2, h3, h4, h5,
     }
     @media (max-width: 767.98px) {
         #torben-aside #torben-logo {
-            width: 80%; /* Puedes ajustar el ancho según sea necesario */
+            width: 100%; /* Puedes ajustar el ancho según sea necesario */
         }
     }
     #torben-aside #torben-logo a {
