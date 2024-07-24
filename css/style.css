@@ -4,7 +4,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-:root {
+ :root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -8417,7 +8417,7 @@ h1, h2, h3, h4, h5,
   transition: all 0.5s ease; }
   @media (min-width: 992px) {
     #torben-aside {
-      width: 25%; } }
+      width: 26%; } }
   @media (max-width: 991.98px) {
     #torben-aside {
       width: 270px;
@@ -8456,7 +8456,7 @@ h1, h2, h3, h4, h5,
     }
     @media (max-width: 767.98px) {
         #torben-aside #torben-logo {
-            width: 120%; /* Puedes ajustar el ancho según sea necesario */
+            width: 80%; /* Puedes ajustar el ancho según sea necesario */
         }
     }
     #torben-aside #torben-logo a {
@@ -8606,7 +8606,7 @@ h1, h2, h3, h4, h5,
   transition: all 0.5s ease; }
   @media (min-width: 992px) {
     #torben-main {
-      width: 75%; } }
+      width: 74%; } }
 
 .torben-nav-toggle {
   cursor: pointer;
