@@ -40,7 +40,7 @@ var fullHeight2 = function() {
     var updateHeight = function() {
         if ($(window).width() <= 768) {
             // Pantallas pequeñas (celulares)
-            $('.js-fullheight2').css('height', $(window).height() * 0.9);
+            $('.js-fullheight2').css('height', $(window).height());
         } else {
             // Pantallas grandes (escritorio)
             $('.js-fullheight2').css('height', $(window).height());
