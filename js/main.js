@@ -18,7 +18,7 @@
     // Función para ajustar la altura en función de la ventana
     var adjustHeight = function() {
         if ($(window).width() < 992) {
-            $fullheight.css('height', '95%');
+            $fullheight.css('height', '100%');
         } else {
             $fullheight.css('height', $(window).height());
         }
